@@ -1,0 +1,673 @@
+/* ==========================================
+   JUEGOS EDUCATIVOS
+   EL CERRO DE LAS MINAS
+========================================== */
+
+
+/* FONDO GENERAL */
+
+body{
+
+    background:#f4efe3;
+
+}
+
+
+
+/* TITULO PRINCIPAL */
+
+main > h1{
+
+    text-align:center;
+
+    color:#16411c;
+
+    font-size:45px;
+
+    margin-top:50px;
+
+    text-transform:uppercase;
+
+}
+
+
+
+.subtitulo{
+
+    text-align:center;
+
+    font-size:20px;
+
+    color:#555;
+
+    margin-bottom:40px;
+
+}
+
+
+
+
+
+/* ==========================================
+   BANNER PRINCIPAL DEL JUEGO
+========================================== */
+
+
+.banner-juego{
+
+
+    width:90%;
+
+    max-width:1200px;
+
+    height:350px;
+
+
+    margin:40px auto;
+
+
+    border-radius:30px;
+
+
+    background:
+
+    linear-gradient(
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.45)
+    ),
+
+    url("img/cerro-minas.jpg");
+
+
+    background-size:cover;
+
+    background-position:center;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    color:white;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+.banner-juego h2{
+
+
+    font-size:45px;
+
+    margin:10px;
+
+
+}
+
+
+
+.banner-juego p{
+
+
+    font-size:22px;
+
+
+}
+
+
+
+
+
+/* BOTON INICIAR */
+
+
+.boton-aventura{
+
+
+    background:#d4a017;
+
+    color:white;
+
+    padding:15px 35px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    margin-top:20px;
+
+    transition:.3s;
+
+
+}
+
+
+
+.boton-aventura:hover{
+
+
+    transform:scale(1.1);
+
+    background:#b8860b;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   CONTENEDOR DE JUEGOS
+========================================== */
+
+
+.contenedor-juegos{
+
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(320px,1fr));
+
+
+    gap:35px;
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   TARJETAS DE RETOS
+========================================== */
+
+
+.juego{
+
+
+    background:white;
+
+
+    border-radius:25px;
+
+
+    padding:30px;
+
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.15);
+
+
+    border-top:8px solid #16411c;
+
+
+    transition:.35s;
+
+
+    position:relative;
+
+
+}
+
+
+
+
+.juego:hover{
+
+
+    transform:translateY(-12px);
+
+
+    box-shadow:
+
+    0 18px 35px rgba(0,0,0,.25);
+
+
+}
+
+
+
+
+
+
+
+/* ETIQUETA RETO */
+
+
+.juego::before{
+
+
+    content:"MISIÓN";
+
+
+    position:absolute;
+
+
+    top:15px;
+
+    right:20px;
+
+
+    background:#d4a017;
+
+
+    color:white;
+
+
+    padding:6px 15px;
+
+
+    border-radius:20px;
+
+
+    font-size:13px;
+
+
+    font-weight:bold;
+
+
+}
+
+
+
+
+
+.juego h2{
+
+
+    color:#16411c;
+
+
+    font-size:25px;
+
+
+    margin-top:25px;
+
+
+}
+
+
+
+
+
+.juego p{
+
+
+    color:#555;
+
+
+    font-size:17px;
+
+
+    line-height:1.6;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   BOTONES DE RESPUESTA
+========================================== */
+
+
+.juego button{
+
+
+    width:90%;
+
+
+    margin:8px auto;
+
+
+    display:block;
+
+
+    padding:13px;
+
+
+    border:none;
+
+
+    border-radius:15px;
+
+
+    background:#16411c;
+
+
+    color:white;
+
+
+    font-size:16px;
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.juego button:hover{
+
+
+    background:#2d7a35;
+
+
+    transform:scale(1.04);
+
+
+}
+
+
+
+
+
+
+
+/* INPUTS */
+
+
+.juego input{
+
+
+    width:90%;
+
+
+    padding:13px;
+
+
+    border-radius:15px;
+
+
+    border:2px solid #ddd;
+
+
+    font-size:16px;
+
+
+}
+
+
+
+
+
+
+
+/* RESULTADOS */
+
+
+.resultado{
+
+
+    margin-top:20px;
+
+
+    padding:10px;
+
+
+    border-radius:12px;
+
+
+    font-weight:bold;
+
+
+    background:#f5f5f5;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   PUNTOS Y PROGRESO
+========================================== */
+
+
+.panel-progreso{
+
+
+    width:90%;
+
+
+    max-width:900px;
+
+
+    margin:30px auto;
+
+
+    background:white;
+
+
+    padding:25px;
+
+
+    border-radius:25px;
+
+
+    text-align:center;
+
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+
+}
+
+
+
+.panel-progreso h3{
+
+
+    color:#16411c;
+
+
+}
+
+
+
+.barra{
+
+
+    width:100%;
+
+
+    height:20px;
+
+
+    background:#ddd;
+
+
+    border-radius:20px;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+.progreso{
+
+
+    width:35%;
+
+
+    height:100%;
+
+
+    background:#d4a017;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   FINAL DEL JUEGO
+========================================== */
+
+
+.recompensa{
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #16411c,
+    #2d7a35
+    );
+
+
+    color:white;
+
+
+    padding:40px;
+
+
+    width:80%;
+
+
+    margin:60px auto;
+
+
+    border-radius:30px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+.recompensa h2{
+
+
+    font-size:40px;
+
+
+}
+
+
+
+
+
+
+/* RESPONSIVE */
+
+
+@media(max-width:700px){
+
+
+main > h1{
+
+font-size:32px;
+
+}
+
+
+
+.banner-juego h2{
+
+font-size:30px;
+
+}
+
+
+
+}
+.banner-juego h2{
+
+    color:white !important;
+
+    font-size:45px;
+
+    text-align:center;
+
+    margin:0;
+
+}
+
+
+.banner-juego p{
+
+    color:white !important;
+
+    font-size:20px;
+
+    text-align:center;
+
+}
+/* TITULO PRINCIPAL DEL JUEGO */
+
+.banner-juego .titulo-juego{
+
+    color:white !important;
+
+    font-size:45px;
+
+    text-align:center;
+
+    margin:0;
+
+}
+
+
+/* DESCRIPCION DEL JUEGO */
+
+.banner-juego .descripcion-juego{
+
+    color:white !important;
+
+    font-size:20px;
+
+    text-align:center;
+
+}

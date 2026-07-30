@@ -1,0 +1,846 @@
+/* ===================================================
+   ESTILOS GENERALES
+=================================================== */
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    font-family:"Segoe UI", Arial, sans-serif;
+
+    background:#f4f6f8;
+
+    color:#333;
+
+    line-height:1.6;
+
+}
+
+
+img{
+
+    max-width:100%;
+
+}
+
+
+/* ===================================================
+   ENCABEZADO
+=================================================== */
+
+
+.encabezado{
+
+    width:95%;
+
+    margin:20px auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 30px;
+
+    background:linear-gradient(135deg,#58b958,#6bc76b);
+
+    border-radius:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+}
+
+
+
+.lado-izquierdo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+.logo-unl{
+
+    width:75px;
+
+}
+
+
+.texto-unl{
+
+    width:150px;
+
+}
+
+
+
+.centro{
+
+    flex:1;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+
+.centro h1{
+
+    margin:0;
+
+    font-size:40px;
+
+    font-family:Georgia,serif;
+
+    line-height:1.2;
+
+}
+
+
+
+.centro h2{
+
+    color:white;
+
+    font-size:15px;
+
+    margin-top:10px;
+
+}
+
+
+
+.lado-derecho{
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+.logo-colegio{
+
+    width:75px;
+
+}
+
+
+.lado-derecho p{
+
+    font-size:15px;
+
+}
+
+
+
+/* ===================================================
+   MENÚ
+=================================================== */
+
+
+nav{
+
+    background:#16411c;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    padding:15px;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+}
+
+
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:10px 20px;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+
+
+nav a:hover{
+
+    background:white;
+
+    color:#16411c;
+
+}
+
+
+
+/* ===================================================
+   BIBLIOTECA DIGITAL
+=================================================== */
+
+
+.biblioteca{
+
+    width:95%;
+
+    margin:auto;
+
+    padding:40px 0;
+
+}
+
+
+
+.hero-biblioteca{
+
+    background:linear-gradient(135deg,#16411c,#2c7a34);
+
+    color:white;
+
+    text-align:center;
+
+    padding:60px 30px;
+
+    border-radius:25px;
+
+    margin-bottom:50px;
+
+}
+
+
+
+.hero-biblioteca h2{
+
+    font-size:45px;
+
+}
+
+
+
+.hero-biblioteca p{
+
+    font-size:19px;
+
+}
+
+
+
+/* ===================================================
+   BLOQUES
+=================================================== */
+
+
+.bloque-biblioteca{
+
+    margin-bottom:60px;
+
+}
+
+
+
+.titulo-bloque{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.titulo-bloque h2{
+
+    color:#16411c;
+
+    font-size:35px;
+
+}
+
+
+
+/* ===================================================
+   CUENTO MULTIFORMATO
+=================================================== */
+
+
+.cuento-card{
+
+    display:flex;
+
+    gap:40px;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    align-items:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+
+
+.cuento-imagen{
+
+    flex:1;
+
+}
+
+
+
+.cuento-imagen img{
+
+    height:330px;
+
+    width:100%;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+}
+
+
+
+.cuento-info{
+
+    flex:1;
+
+}
+
+
+
+.cuento-info h3{
+
+    color:#16411c;
+
+    font-size:35px;
+
+}
+
+
+
+/* ===================================================
+   BOTONES CUENTO
+=================================================== */
+
+
+.opciones-cuento button{
+
+    background:#16411c;
+
+    color:white;
+
+    border:none;
+
+    padding:14px 25px;
+
+    margin:8px;
+
+    border-radius:12px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.opciones-cuento button:hover{
+
+    background:#2c7a34;
+
+    transform:translateY(-3px);
+
+}
+
+
+
+/* ===================================================
+   VIDEOCUENTOS
+=================================================== */
+
+
+.videos-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.video-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+
+}
+
+
+
+.video-card h3{
+
+    color:#16411c;
+
+    font-size:25px;
+
+}
+
+
+
+.video-card p{
+
+    color:#555;
+
+}
+
+
+
+.video-card .btn-recurso{
+
+    margin-top:20px;
+
+    padding:14px 40px;
+
+    background:#16411c;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.video-card .btn-recurso:hover{
+
+    background:#2c7a34;
+
+    transform:translateY(-3px);
+
+}
+/* ===================================================
+   TRADICIONES DE MALACATOS
+=================================================== */
+
+
+.tradiciones-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.tradicion-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+
+    transition:.3s;
+
+}
+
+
+
+.tradicion-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+
+.imagen-tradicion{
+
+    width:100%;
+
+    height:220px;
+
+    overflow:hidden;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.imagen-tradicion img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+
+.tradicion-card h3{
+
+    color:#16411c;
+
+    font-size:25px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.tradicion-card p{
+
+    color:#555;
+
+}
+
+
+
+.tradicion-card a{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    background:#16411c;
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+
+
+.tradicion-card a:hover{
+
+    background:#2c7a34;
+
+}
+
+
+
+/* ===================================================
+   MODAL PARA PDF - VIDEO - AUDIO
+=================================================== */
+
+
+.modal{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.75);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:2000;
+
+}
+
+
+
+.modal-contenido{
+
+    background:white;
+
+    width:80%;
+
+    max-width:900px;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    position:relative;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+
+}
+
+
+
+.modal-contenido h2{
+
+    color:#16411c;
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.modal-contenido video{
+
+    width:100%;
+
+    border-radius:15px;
+
+}
+
+
+
+.modal-contenido iframe{
+
+    width:100%;
+
+    border-radius:15px;
+
+}
+
+
+
+.cerrar{
+
+    position:absolute;
+
+    right:20px;
+
+    top:10px;
+
+    font-size:35px;
+
+    color:#16411c;
+
+    cursor:pointer;
+
+}
+
+
+
+/* ===================================================
+   FOOTER
+=================================================== */
+
+
+footer{
+
+    background:#16411c;
+
+    color:white;
+
+    padding:30px 20px;
+
+    margin-top:50px;
+
+    font-family:Arial,sans-serif;
+
+}
+
+
+
+footer img{
+
+    max-width:250px;
+
+}
+
+
+
+footer a{
+
+    color:#aad2ff;
+
+    text-decoration:underline;
+
+}
+
+
+
+/* ===================================================
+   RESPONSIVE
+=================================================== */
+
+
+@media(max-width:900px){
+
+
+.encabezado{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+
+
+.centro h1{
+
+    font-size:30px;
+
+}
+
+
+
+nav{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+
+
+.cuento-card{
+
+    flex-direction:column;
+
+}
+
+
+
+.cuento-info h3{
+
+    font-size:28px;
+
+}
+
+
+
+.hero-biblioteca h2{
+
+    font-size:32px;
+
+}
+
+
+
+.modal-contenido{
+
+    width:95%;
+
+}
+
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+.biblioteca{
+
+    width:90%;
+
+}
+
+
+
+.cuento-imagen img{
+
+    height:250px;
+
+}
+
+
+
+.video-card{
+
+    padding:25px;
+
+}
+
+
+
+.opciones-cuento button{
+
+    width:100%;
+
+    margin:8px 0;
+
+}
+
+
+}

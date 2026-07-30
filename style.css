@@ -1,0 +1,1625 @@
+/* ===================================================
+   ESTILOS GENERALES
+=================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:#f4f6f8;
+    color:#333;
+    line-height:1.7;
+}
+
+/* ===================================================
+   ENCABEZADO
+   (No modifica tu estructura)
+=================================================== */
+
+header{
+    width:100%;
+}
+
+header h2{
+    color:white;
+    font-size:24px;
+    font-weight:600;
+    line-height:1.4;
+}
+
+/* ===================================================
+   MENÚ
+=================================================== */
+
+nav{
+    background:#16411c;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    padding:15px;
+    position:sticky;
+    top:0;
+    z-index:999;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:8px;
+    transition:.3s;
+    font-weight:bold;
+}
+
+nav a:hover{
+    background:white;
+    color:#16411c;
+}
+
+/* ===================================================
+   SUBMENÚ
+=================================================== */
+
+.menu-cuento{
+    position:relative;
+}
+
+.submenu{
+    display:none;
+    position:absolute;
+    top:45px;
+    left:0;
+    background:white;
+    min-width:260px;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+    overflow:hidden;
+}
+
+.submenu a{
+    display:block;
+    color:#333;
+    padding:12px 15px;
+}
+
+.submenu a:hover{
+    background:#16411c;
+    color:white;
+}
+
+.menu-cuento:hover .submenu{
+    display:block;
+}
+
+/* ===================================================
+   TITULOS
+=================================================== */
+
+h1{
+    text-align:center;
+    color:#16411c;
+    font-size:40px;
+    margin-top:40px;
+}
+
+body>p{
+    text-align:center;
+    font-size:20px;
+    color:#666;
+    margin-bottom:40px;
+}
+
+/* ===================================================
+   SECCIONES
+=================================================== */
+
+section{
+    max-width:1300px;
+    margin:40px auto;
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+/* ===================================================
+   TARJETAS
+=================================================== */
+
+.card{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+}
+
+.card-texto{
+    flex:1;
+    text-align:justify;
+}
+
+.card-texto h3{
+    color:#16411c;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.card-imagen{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.card-imagen img{
+    width:100%;
+    max-width:420px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+    transition:.4s;
+}
+
+.card-imagen img:hover{
+    transform:scale(1.03);
+}
+
+/* ===================================================
+   IMÁGENES
+=================================================== */
+
+img{
+    max-width:100%;
+}
+
+/* ===================================================
+   FOOTER
+=================================================== */
+
+footer{
+    margin-top:50px;
+}
+
+footer a{
+    color:#9ad1ff;
+    text-decoration:none;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
+
+/* ===================================================
+   RESPONSIVE
+=================================================== */
+
+@media(max-width:900px){
+
+nav{
+    flex-direction:column;
+}
+
+.card{
+    flex-direction:column;
+}
+
+header{
+    flex-direction:column !important;
+    text-align:center;
+}
+
+header h2{
+    font-size:18px;
+}
+
+h1{
+    font-size:30px;
+}
+
+}
+/* ===================================================
+   FOLLETO DIGITAL
+=================================================== */
+
+.folleto-contenedor{
+    width:95%;
+    margin:30px auto;
+    display:flex;
+    justify-content:center;
+}
+
+
+.folleto-contenedor iframe{
+    width:100%;
+    height:850px;
+    border:1px solid #ccc;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+
+/* Encabezado secundario */
+
+.header-secundario{
+    background:#16411c;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+}
+
+
+.header-secundario img:first-child{
+    height:90px;
+}
+
+
+.header-secundario img:last-child{
+    height:70px;
+}
+
+
+
+@media(max-width:768px){
+
+    .folleto-contenedor iframe{
+        height:600px;
+    }
+
+
+    .header-secundario{
+        flex-direction:column;
+    }
+
+}
+/* ===================================================
+   JUEGOS EDUCATIVOS
+=================================================== */
+
+
+.subtitulo{
+    text-align:center;
+    font-size:20px;
+    color:#666;
+    margin-bottom:40px;
+}
+
+
+
+.contenedor-juegos{
+
+    max-width:1200px;
+    margin:40px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:25px;
+
+    padding:20px;
+
+}
+
+
+
+
+.juego{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+
+
+.juego:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.18);
+
+}
+
+
+
+
+.juego h2{
+
+    color:#16411c;
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+.juego p{
+
+    margin:15px 0;
+
+    text-align:center;
+
+}
+
+
+
+
+.juego button{
+
+    background:#16411c;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 18px;
+
+    margin:5px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+
+
+
+.juego button:hover{
+
+    background:#2b7a35;
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+
+.juego input{
+
+    padding:10px;
+
+    width:80%;
+
+    border:2px solid #16411c;
+
+    border-radius:8px;
+
+    margin:10px;
+
+    font-size:16px;
+
+}
+
+
+
+
+
+.resultado{
+
+    font-weight:bold;
+
+    font-size:18px;
+
+    margin-top:15px;
+
+}
+
+
+
+
+
+
+
+/* ==========================
+   FOOTER JUEGOS
+========================== */
+
+
+.footer-contenido{
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+}
+
+
+
+.footer-imagen img{
+
+    max-width:250px;
+
+}
+
+
+
+.footer-info{
+
+    line-height:1.8;
+
+}
+
+
+
+
+.copyright{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:#aaa;
+
+    font-size:12px;
+
+}
+
+
+
+
+
+
+
+/* ==========================
+   CELULARES
+========================== */
+
+
+@media(max-width:768px){
+
+
+.contenedor-juegos{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.juego{
+
+    width:100%;
+
+}
+
+
+
+}
+/* ===================================================
+   LEYENDAS Y CUENTOS
+=================================================== */
+
+
+.leyenda-contenedor{
+
+    max-width:1200px;
+    margin:40px auto;
+    padding:20px;
+
+}
+
+
+.leyenda-bloque{
+
+    background:white;
+
+    margin-bottom:40px;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+}
+
+
+
+.leyenda-bloque p{
+
+    text-align:justify;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+
+
+.leyenda-imagen{
+
+    text-align:center;
+
+    margin:25px 0;
+
+}
+
+
+
+.leyenda-imagen img{
+
+    width:60%;
+
+    max-width:500px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+    transition:.3s;
+
+}
+
+
+
+.leyenda-imagen img:hover{
+
+    transform:scale(1.03);
+
+}
+
+
+
+
+@media(max-width:768px){
+
+.leyenda-imagen img{
+
+    width:95%;
+
+}
+
+
+.leyenda-bloque{
+
+    padding:20px;
+
+}
+
+
+}
+/* ===================================================
+   VIDEO CUENTO
+=================================================== */
+
+
+.video-contenedor{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    margin:40px auto;
+
+}
+
+
+
+.video-cuento{
+
+    width:50%;
+    max-width:700px;
+    height:auto;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+    transition:.3s;
+
+}
+
+
+
+.video-cuento:hover{
+
+    transform:scale(1.02);
+
+}
+
+
+
+/* ===================================================
+   PREGUNTAS DE REFLEXIÓN
+=================================================== */
+
+
+.preguntas-reflexion{
+
+    max-width:1200px;
+    margin:40px auto;
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+
+
+.preguntas-reflexion h2{
+
+    text-align:center;
+    color:#16411c;
+    font-size:30px;
+    margin-bottom:30px;
+
+}
+
+
+
+.pregunta{
+
+    background:#f4f6f8;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:12px;
+    border-left:6px solid #16411c;
+    transition:.3s;
+
+}
+
+
+
+.pregunta:hover{
+
+    transform:translateX(5px);
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+
+
+.pregunta h3{
+
+    color:#16411c;
+    font-size:20px;
+    margin-bottom:10px;
+
+}
+
+
+
+.pregunta p{
+
+    text-align:justify;
+    font-size:17px;
+    color:#333;
+    line-height:1.7;
+
+}
+
+
+
+/* ===================================================
+   ADAPTACIÓN PARA CELULAR
+=================================================== */
+
+
+@media(max-width:900px){
+
+
+.video-cuento{
+
+    width:90%;
+
+}
+
+
+.preguntas-reflexion{
+
+    margin:20px;
+    padding:20px;
+
+}
+
+
+.preguntas-reflexion h2{
+
+    font-size:25px;
+
+}
+
+
+.pregunta p{
+
+    font-size:16px;
+
+}
+
+
+}
+/* ===================================================
+   FOLLETO DIGITAL
+=================================================== */
+
+
+.folleto-contenedor{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    margin:40px auto;
+
+}
+
+
+
+.folleto-contenedor iframe{
+
+    width:90%;
+    height:700px;
+    border:1px solid #ddd;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+
+
+/* ===================================================
+   VIDEO CUENTO
+=================================================== */
+
+
+.video-contenedor{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    margin:40px auto;
+
+}
+
+
+
+.video-cuento{
+
+    width:50%;
+    max-width:700px;
+    height:auto;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+
+}
+
+
+
+
+/* ===================================================
+   PREGUNTAS DE REFLEXIÓN
+=================================================== */
+
+
+.preguntas-reflexion{
+
+    max-width:1200px;
+    margin:40px auto;
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+
+
+.preguntas-reflexion h2{
+
+    text-align:center;
+    color:#16411c;
+    font-size:30px;
+    margin-bottom:30px;
+
+}
+
+
+
+.pregunta{
+
+    background:#f4f6f8;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:12px;
+    border-left:6px solid #16411c;
+
+}
+
+
+
+.pregunta h3{
+
+    color:#16411c;
+    margin-bottom:10px;
+
+}
+
+
+
+.pregunta p{
+
+    text-align:justify;
+    font-size:17px;
+    line-height:1.7;
+
+}
+
+
+
+/* ===================================================
+   RESPONSIVE
+=================================================== */
+
+
+@media(max-width:900px){
+
+
+.folleto-contenedor iframe{
+
+    width:95%;
+    height:550px;
+
+}
+
+
+
+.video-cuento{
+
+    width:90%;
+
+}
+
+
+
+.preguntas-reflexion{
+
+    margin:20px;
+
+}
+
+
+}
+/* Título del submenú */
+.submenu-titulo{
+    background:#16411c;
+    color:white;
+    padding:12px 15px;
+    font-weight:bold;
+    cursor:default;
+}
+
+
+/* Ajuste del menú desplegable */
+.submenu{
+    display:none;
+    position:absolute;
+    top:45px;
+    left:0;
+    background:white;
+    min-width:280px;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+    overflow:hidden;
+}
+
+
+/* Enlaces del submenu */
+.submenu a{
+    display:block;
+    color:#333;
+    padding:12px 18px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+
+.submenu a:hover{
+    background:#16411c;
+    color:white;
+}
+
+
+/* Mostrar menú */
+.menu-cuento:hover .submenu{
+    display:block;
+}
+/*=========================
+      ENCABEZADO
+=========================*/
+
+.encabezado{
+    width:95%;
+    margin:20px auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 30px;
+
+    background:linear-gradient(135deg,#58b958,#6bc76b);
+
+    border-radius:10px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+/* Lado izquierdo */
+
+.lado-izquierdo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-unl{
+    width:75px;
+}
+
+.texto-unl{
+    width:150px;
+}
+
+/* Centro */
+
+.centro{
+    flex:1;
+    text-align:center;
+    color:white;
+}
+
+.centro h1{
+    margin:0;
+    font-size:40px;
+    font-family:Georgia, serif;
+    line-height:1.2;
+}
+
+.centro h2{
+    margin-top:8px;
+    font-size:15px;
+    letter-spacing:1px;
+}
+
+/* Lado derecho */
+
+.lado-derecho{
+    text-align:center;
+    color:white;
+}
+
+.logo-colegio{
+    width:75px;
+}
+
+.lado-derecho p{
+    margin-top:8px;
+    font-size:15px;
+    line-height:1.3;
+}
+/* BIBLIOTECA */
+
+.biblioteca{
+    padding:40px;
+}
+
+
+.biblioteca-portada{
+
+    background:#16411c;
+    color:white;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    margin-bottom:40px;
+
+}
+
+
+.biblioteca-portada h2{
+
+    font-size:35px;
+    margin-bottom:15px;
+
+}
+
+
+
+.categorias{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+
+}
+
+
+
+.tarjeta-biblioteca{
+
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    text-align:center;
+    transition:.3s;
+
+}
+
+
+
+.tarjeta-biblioteca:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.tarjeta-biblioteca h3{
+
+    color:#16411c;
+    font-size:22px;
+
+}
+
+
+
+.tarjeta-biblioteca p{
+
+    color:#555;
+    line-height:1.6;
+
+}
+
+
+
+.tarjeta-biblioteca a{
+
+    display:inline-block;
+    margin-top:15px;
+    background:#16411c;
+    color:white;
+    padding:12px 25px;
+    border-radius:8px;
+    text-decoration:none;
+
+}
+
+
+.tarjeta-biblioteca a:hover{
+
+    background:#246b2c;
+
+}
+/* ==========================
+   BIBLIOTECA DIGITAL
+========================== */
+
+
+.biblioteca{
+
+    padding:50px;
+
+}
+
+
+
+.hero-biblioteca{
+
+    background:
+    linear-gradient(135deg,#16411c,#2c7a34);
+
+    color:white;
+
+    text-align:center;
+
+    padding:60px 30px;
+
+    border-radius:25px;
+
+    margin-bottom:50px;
+
+}
+
+
+
+.hero-biblioteca h2{
+
+    font-size:45px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.hero-biblioteca p{
+
+    font-size:19px;
+
+}
+
+
+
+
+.bloque-biblioteca{
+
+    margin-bottom:60px;
+
+}
+
+
+
+
+.titulo-bloque{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.titulo-bloque h2{
+
+    color:#16411c;
+
+    font-size:35px;
+
+}
+
+
+
+.titulo-bloque p{
+
+    color:#666;
+
+}
+
+
+
+
+
+/* CUENTO PRINCIPAL */
+
+
+.cuento-card{
+
+    display:flex;
+
+    gap:40px;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.15);
+
+    align-items:center;
+
+}
+
+
+
+.cuento-imagen{
+
+    flex:1;
+
+}
+
+
+
+.cuento-imagen img{
+
+    width:100%;
+
+    height:330px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+}
+
+
+
+.cuento-info{
+
+    flex:1;
+
+}
+
+
+
+.cuento-info h3{
+
+    font-size:35px;
+
+    color:#16411c;
+
+}
+
+
+
+.cuento-info p{
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    color:#555;
+
+}
+
+
+
+.opciones-cuento{
+
+    margin-top:25px;
+
+}
+
+
+
+.opciones-cuento a{
+
+    display:inline-block;
+
+    background:#16411c;
+
+    color:white;
+
+    padding:14px 20px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    margin:8px;
+
+}
+
+
+
+.opciones-cuento a:hover{
+
+    background:#2c7a34;
+
+}
+
+
+
+
+
+/* VIDEOCUENTOS */
+
+
+.videos-container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.video-card{
+
+    background:white;
+
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.12);
+
+}
+
+
+
+.icono-video{
+
+    font-size:55px;
+
+}
+
+
+
+.video-card h3{
+
+    color:#16411c;
+
+}
+
+
+
+.video-card a{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    background:#16411c;
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+}
+
+
+
+
+
+@media(max-width:850px){
+
+
+.cuento-card{
+
+    flex-direction:column;
+
+}
+
+
+.biblioteca{
+
+    padding:20px;
+
+}
+
+
+}
+/* ==========================
+   TRADICIONES MALACATOS
+========================== */
+
+
+.tradiciones-container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.tradicion-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.12);
+
+    transition:.3s;
+
+}
+
+
+
+.tradicion-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.icono-tradicion{
+
+    font-size:50px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.tradicion-card h3{
+
+    color:#16411c;
+
+    font-size:25px;
+
+}
+
+
+
+.tradicion-card p{
+
+    color:#555;
+
+    line-height:1.6;
+
+}
+
+
+
+.tradicion-card a{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    background:#16411c;
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+}
+
+
+
+.tradicion-card a:hover{
+
+    background:#2c7a34;
+
+}
+/* IMÁGENES TRADICIONES */
+
+.imagen-tradicion{
+
+    width:100%;
+
+    height:220px;
+
+    overflow:hidden;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.imagen-tradicion img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+.modal{
+
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.7);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+
+}
+
+.modal-contenido{
+
+    background:#fff;
+    width:80%;
+    max-width:900px;
+    border-radius:12px;
+    padding:25px;
+    position:relative;
+    animation:aparecer .3s;
+
+}
+
+.cerrar{
+
+    position:absolute;
+    right:20px;
+    top:10px;
+    font-size:35px;
+    cursor:pointer;
+    color:#444;
+
+}
+
+.cerrar:hover{
+
+    color:red;
+
+}
+
+@keyframes aparecer{
+
+    from{
+
+        transform:scale(.8);
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+        opacity:1;
+
+    }
+
+}
+
+.opciones-cuento button{
+
+    background:#1b5e20;
+    color:white;
+    border:none;
+    padding:12px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    margin:5px;
+    font-size:16px;
+
+}
+
+.opciones-cuento button:hover{
+
+    background:#2e7d32;
+
+}

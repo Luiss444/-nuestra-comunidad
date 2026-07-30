@@ -1,0 +1,1986 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>
+Juegos Educativos | El Cerro de las Minas
+</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="juegos.css">
+
+
+</head>
+
+
+<body>
+
+
+<!-- ================= ENCABEZADO ================= -->
+
+
+<header class="encabezado">
+
+
+<div class="lado-izquierdo">
+
+<img src="img/LOGO.png"
+alt="Escudo UNL"
+class="logo-unl">
+
+
+<img src="img/Universidad-Nacional-de-Loja-UNL.png"
+alt="Universidad Nacional de Loja"
+class="texto-unl">
+
+</div>
+
+
+
+
+<div class="centro">
+
+
+<h1>
+CUENTOS DE<br>
+NUESTRA COMUNIDAD
+</h1>
+
+
+
+<h2>
+CARRERA DE PEDAGOGÍA DE LAS CIENCIAS
+EXPERIMENTALES INFORMÁTICA
+</h2>
+
+
+</div>
+
+
+
+
+
+<div class="lado-derecho">
+
+
+<img src="img/Unidad educativa.png"
+alt="Unidad Educativa"
+class="logo-colegio">
+
+
+<p>
+Unidad Educativa<br>
+
+<strong>
+"Rafael Rodríguez Palacios"
+</strong>
+
+</p>
+
+
+</div>
+
+
+</header>
+
+
+
+
+
+<!-- ================= MENÚ ================= -->
+
+
+<nav>
+
+
+<a href="index.html">
+Inicio
+</a>
+
+
+<a href="unidad.html">
+Nuestra Comunidad
+</a>
+
+
+<a href="biblioteca.html">
+Biblioteca
+</a>
+
+
+<a href="juegos.html">
+Juegos
+</a>
+
+
+</nav>
+
+
+
+
+
+
+
+<!-- ================= CONTENIDO ================= -->
+
+
+<main>
+
+
+
+<section class="banner-juego">
+
+<h1 class="titulo-juego">
+🏔 El Desafío del Cerro de las Minas
+</h1>
+
+<p class="descripcion-juego">
+Pon a prueba tus conocimientos sobre la leyenda de Malacatos.
+</p>
+
+</section>
+
+
+
+
+
+
+<section class="panel-progreso">
+
+
+<h2>
+🏆 Progreso de la aventura
+</h2>
+
+
+<p>
+
+Misiones completadas:
+
+<span id="contador">
+0
+</span>
+/
+20
+
+</p>
+
+
+
+<div class="barra">
+
+
+<div class="progreso"
+id="barra-progreso">
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<div class="contenedor-juegos">
+
+
+
+
+
+
+
+<!-- ================= MISIÓN 1 ================= -->
+
+
+<div class="juego">
+
+
+<h2>
+📜 Misión 1: El protagonista
+</h2>
+
+
+
+<p>
+¿Don Esteban era el hacendado protagonista
+de la historia?
+</p>
+
+
+
+<button onclick="juego1(true)">
+Verdadero
+</button>
+
+
+
+<button onclick="juego1(false)">
+Falso
+</button>
+
+
+
+<p id="r1" class="resultado"></p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= MISIÓN 2 ================= -->
+
+
+<div class="juego">
+
+
+<h2>
+👨‍🌾 Misión 2: El compañero fiel
+</h2>
+
+
+<p>
+¿Cómo se llamaba el peón que acompañó
+a Don Esteban?
+</p>
+
+
+<button onclick="juego2('a')">
+Pedro
+</button>
+
+
+<button onclick="juego2('b')">
+Jacinto
+</button>
+
+
+<button onclick="juego2('c')">
+Manuel
+</button>
+
+
+<p id="r2" class="resultado"></p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= MISIÓN 3 ================= -->
+
+
+<div class="juego">
+
+
+<h2>
+🏔 Misión 3: El lugar secreto
+</h2>
+
+
+<p>
+La historia ocurrió en el barrio ________
+de Malacatos.
+</p>
+
+
+
+<input type="text"
+id="respuesta3"
+placeholder="Escribe la respuesta">
+
+
+
+<button onclick="juego3()">
+Comprobar
+</button>
+
+
+
+<p id="r3" class="resultado"></p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= MISIÓN 4 ================= -->
+
+
+<div class="juego">
+
+
+<h2>
+🌫 Misión 4: La choza misteriosa
+</h2>
+
+
+
+<p>
+¿Qué encontraron Don Esteban y Jacinto?
+</p>
+
+
+
+<button onclick="juego4('a')">
+Una choza antigua
+</button>
+
+
+<button onclick="juego4('b')">
+Un castillo
+</button>
+
+
+<button onclick="juego4('c')">
+Una iglesia
+</button>
+
+
+
+<p id="r4" class="resultado"></p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= MISIÓN 5 ================= -->
+
+
+<div class="juego">
+
+
+<h2>
+🌽 Misión 5: El tesoro oculto
+</h2>
+
+
+
+<p>
+¿Qué ocurrió con las mazorcas?
+</p>
+
+
+
+<button onclick="juego5('a')">
+Se convirtieron en oro
+</button>
+
+
+<button onclick="juego5('b')">
+Desaparecieron
+</button>
+
+
+<button onclick="juego5('c')">
+Se dañaron
+</button>
+
+
+
+<p id="r5" class="resultado"></p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= MISIÓN 6 ================= -->
+
+
+<div class="juego">
+
+
+<h2>
+🔎 Misión 6: El inicio del misterio
+</h2>
+
+
+
+<p>
+¿Qué ocurrió primero?
+</p>
+
+
+
+<button onclick="juego6('a')">
+Escucharon rumores del cerro
+</button>
+
+
+
+<button onclick="juego6('b')">
+Encontraron las mazorcas de oro
+</button>
+
+
+
+<p id="r6" class="resultado"></p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= MISIÓN 7 ================= -->
+
+
+<div class="juego">
+
+
+<h2>
+🧩 Misión 7: Descubre el nombre
+</h2>
+
+
+
+<p>
+Completa el nombre del peón:
+</p>
+
+
+
+<h3>
+J _ C I N T O
+</h3>
+
+
+
+<input type="text"
+id="respuesta7"
+placeholder="Completa la palabra">
+
+
+<button onclick="juego7()">
+Comprobar
+</button>
+
+
+
+<p id="r7" class="resultado"></p>
+
+
+</div>
+<!-- ================= MISIÓN 8 ================= -->
+
+
+<div class="juego">
+
+
+<h2>
+👤 Misión 8: Adivina el personaje
+</h2>
+
+
+<p>
+Era el hacendado que buscaba nuevas tierras
+y cosechas.
+</p>
+
+
+<input type="text"
+id="respuesta8"
+placeholder="Escribe el nombre">
+
+
+<button onclick="juego8()">
+Comprobar
+</button>
+
+
+<p id="r8" class="resultado"></p>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= MISIÓN 9 ================= -->
+
+
+<div class="juego">
+
+
+<h2>
+🌎 Misión 9: Lugar de la historia
+</h2>
+
+
+<p>
+¿Dónde ocurrió la historia?
+</p>
+
+
+<button onclick="juego9('a')">
+Rumishitana
+</button>
+
+
+<button onclick="juego9('b')">
+Quito
+</button>
+
+
+<button onclick="juego9('c')">
+Cuenca
+</button>
+
+
+<p id="r9" class="resultado"></p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= MISIÓN 10 ================= -->
+
+
+<div class="juego">
+
+
+<h2>
+📖 Misión 10: La enseñanza
+</h2>
+
+
+<p>
+¿Qué enseñanza deja la leyenda?
+</p>
+
+
+<button onclick="juego10('a')">
+La codicia puede traer consecuencias
+</button>
+
+
+<button onclick="juego10('b')">
+Siempre hay que buscar oro
+</button>
+
+
+<p id="r10" class="resultado"></p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= MISIÓN 11 ================= -->
+
+
+<div class="juego">
+
+
+<h2>
+🤝 Misión 11: El acompañante
+</h2>
+
+
+<p>
+¿Quién acompañó a Don Esteban?
+</p>
+
+
+<button onclick="juego11('a')">
+Jacinto
+</button>
+
+
+<button onclick="juego11('b')">
+Un viajero desconocido
+</button>
+
+
+<p id="r11" class="resultado"></p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= MISIÓN 12 ================= -->
+
+
+<div class="juego">
+
+
+<h2>
+🌫 Misión 12: El misterio del cerro
+</h2>
+
+
+<p>
+¿Qué ocurre cuando alguien se acerca
+con codicia?
+</p>
+
+
+<button onclick="juego12('a')">
+El cerro se cubre de neblina
+</button>
+
+
+<button onclick="juego12('b')">
+Aparece una ciudad
+</button>
+
+
+<p id="r12" class="resultado"></p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= MISIÓN 13 ================= -->
+
+
+<div class="juego">
+
+
+<h2>
+🌽 Misión 13: El descubrimiento
+</h2>
+
+
+<p>
+Después de encontrar la choza,
+¿qué hicieron?
+</p>
+
+
+<button onclick="juego13('a')">
+Tomaron las mazorcas
+</button>
+
+
+<button onclick="juego13('b')">
+Construyeron una casa
+</button>
+
+
+<p id="r13" class="resultado"></p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= MISIÓN 14 ================= -->
+
+
+<div class="juego">
+
+
+<h2>
+🔍 Misión 14: Detecta el error
+</h2>
+
+
+<p>
+La historia ocurrió en la ciudad de Quito.
+</p>
+
+
+<button onclick="juego14('a')">
+Correcto
+</button>
+
+
+<button onclick="juego14('b')">
+Incorrecto
+</button>
+
+
+<p id="r14" class="resultado"></p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= MISIÓN 15 ================= -->
+
+
+<div class="juego">
+
+
+<h2>
+🏺 Misión 15: Objetos antiguos
+</h2>
+
+
+<p>
+¿Qué había dentro de la choza?
+</p>
+
+
+<button onclick="juego15('a')">
+Herramientas antiguas y vasijas
+</button>
+
+
+<button onclick="juego15('b')">
+Computadoras modernas
+</button>
+
+
+<p id="r15" class="resultado"></p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= MISIÓN 16 ================= -->
+
+
+<div class="juego">
+
+
+<h2>
+💡 Misión 16: La pista dorada
+</h2>
+
+
+<p>
+Soy brillante, tengo granos y antes era una mazorca.
+¿Qué soy?
+</p>
+
+
+<input type="text"
+id="respuesta16"
+placeholder="Escribe la respuesta">
+
+
+<button onclick="juego16()">
+Resolver pista
+</button>
+
+
+<p id="r16" class="resultado"></p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= MISIÓN 17 ================= -->
+
+
+<div class="juego">
+
+
+<h2>
+🏔 Misión 17: Mito o realidad
+</h2>
+
+
+<p>
+Según la leyenda, el cerro puede esconderse
+entre la neblina.
+</p>
+
+
+<button onclick="juego17('a')">
+Verdadero
+</button>
+
+
+<button onclick="juego17('b')">
+Falso
+</button>
+
+
+<p id="r17" class="resultado"></p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= MISIÓN 18 ================= -->
+
+
+<div class="juego">
+
+
+<h2>
+👨‍🌾 Misión 18: Completa el nombre
+</h2>
+
+
+<p>
+Don ________ era el hacendado.
+</p>
+
+
+<input type="text"
+id="respuesta18"
+placeholder="Nombre">
+
+
+<button onclick="juego18()">
+Comprobar
+</button>
+
+
+<p id="r18" class="resultado"></p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= MISIÓN 19 ================= -->
+
+
+<div class="juego">
+
+
+<h2>
+⭐ Misión 19: La decisión correcta
+</h2>
+
+
+<p>
+¿Qué actitud habría permitido regresar del cerro?
+</p>
+
+
+<button onclick="juego19('a')">
+Humildad y buenas intenciones
+</button>
+
+
+<button onclick="juego19('b')">
+Codicia y ambición
+</button>
+
+
+<p id="r19" class="resultado"></p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= MISIÓN 20 ================= -->
+
+
+<div class="juego">
+
+
+<h2>
+🏆 Misión Final: Guardián de la leyenda
+</h2>
+
+
+<p>
+¿Cuál es el nombre de la leyenda?
+</p>
+
+
+<input type="text"
+id="respuesta20"
+placeholder="Nombre de la leyenda">
+
+
+<button onclick="juego20()">
+Finalizar
+</button>
+
+
+<p id="r20" class="resultado"></p>
+
+
+</div>
+<!-- ================= FIN DE MISIONES ================= -->
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= RECOMPENSA FINAL ================= -->
+
+
+<section class="recompensa">
+
+
+<h2>
+🏆 Aventura completada
+</h2>
+
+
+<p>
+
+Has terminado el desafío del Cerro de las Minas.
+
+</p>
+
+
+<p>
+
+Continúa aprendiendo y conservando
+las tradiciones de Malacatos.
+
+</p>
+
+
+</section>
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+
+<script>
+
+
+let puntos = 0;
+
+let misiones = 0;
+
+
+
+
+
+function actualizarProgreso(){
+
+
+document.getElementById("contador").innerHTML = misiones;
+
+
+let porcentaje = (misiones / 20) * 100;
+
+
+document.getElementById("barra-progreso").style.width =
+porcentaje + "%";
+
+
+}
+
+
+
+
+
+
+
+function correcto(id,texto){
+
+
+document.getElementById(id).innerHTML =
+"✅ Correcto: " + texto;
+
+
+misiones++;
+
+
+actualizarProgreso();
+
+
+}
+
+
+
+
+
+
+function incorrecto(id,texto){
+
+
+document.getElementById(id).innerHTML =
+"❌ Incorrecto: " + texto;
+
+
+}
+
+
+
+
+
+
+
+// MISIÓN 1
+
+
+function juego1(r){
+
+
+if(r){
+
+correcto(
+"r1",
+"Don Esteban era el hacendado protagonista"
+);
+
+}
+
+else{
+
+incorrecto(
+"r1",
+"Don Esteban sí era el protagonista"
+);
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+// MISIÓN 2
+
+
+function juego2(r){
+
+
+if(r=="b"){
+
+
+correcto(
+"r2",
+"Jacinto era el peón fiel"
+);
+
+
+}
+
+else{
+
+
+incorrecto(
+"r2",
+"La respuesta correcta era Jacinto"
+);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+// MISIÓN 3
+
+
+function juego3(){
+
+
+let respuesta =
+document.getElementById("respuesta3").value.toLowerCase();
+
+
+
+if(respuesta.includes("rumishitana")){
+
+
+correcto(
+"r3",
+"El lugar era Rumishitana"
+);
+
+
+}
+
+else{
+
+
+incorrecto(
+"r3",
+"La respuesta era Rumishitana"
+);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+// MISIÓN 4
+
+
+function juego4(r){
+
+
+if(r=="a"){
+
+
+correcto(
+"r4",
+"Encontraron una choza antigua"
+);
+
+
+}
+
+else{
+
+
+incorrecto(
+"r4",
+"Era una choza antigua"
+);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+// MISIÓN 5
+
+
+function juego5(r){
+
+
+if(r=="a"){
+
+
+correcto(
+"r5",
+"Las mazorcas se transformaron en oro"
+);
+
+
+}
+
+else{
+
+
+incorrecto(
+"r5",
+"Las mazorcas se convirtieron en oro"
+);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+// MISIÓN 6
+
+
+function juego6(r){
+
+
+if(r=="a"){
+
+
+correcto(
+"r6",
+"Primero escucharon rumores del cerro"
+);
+
+
+}
+
+else{
+
+
+incorrecto(
+"r6",
+"Primero escucharon rumores"
+);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+// MISIÓN 7
+
+
+function juego7(){
+
+
+let respuesta =
+document.getElementById("respuesta7").value.toLowerCase();
+
+
+
+if(respuesta.includes("a")){
+
+
+correcto(
+"r7",
+"El nombre era Jacinto"
+);
+
+
+}
+
+else{
+
+
+incorrecto(
+"r7",
+"Debía completar Jacinto"
+);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+// MISIÓN 8
+
+
+function juego8(){
+
+
+let respuesta =
+document.getElementById("respuesta8").value.toLowerCase();
+
+
+
+if(respuesta.includes("esteban")){
+
+
+correcto(
+"r8",
+"Era Don Esteban"
+);
+
+
+}
+
+else{
+
+
+incorrecto(
+"r8",
+"Era Don Esteban"
+);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+// MISIÓN 9
+
+
+function juego9(r){
+
+
+if(r=="a"){
+
+
+correcto(
+"r9",
+"Fue en Rumishitana"
+);
+
+
+}
+
+else{
+
+
+incorrecto(
+"r9",
+"Fue en Rumishitana"
+);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+// MISIÓN 10
+
+
+function juego10(r){
+
+
+if(r=="a"){
+
+
+correcto(
+"r10",
+"La codicia trae consecuencias"
+);
+
+
+}
+
+else{
+
+
+incorrecto(
+"r10",
+"Esa era la enseñanza"
+);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+// MISIÓN 11
+
+
+function juego11(r){
+
+
+if(r=="a"){
+
+
+correcto(
+"r11",
+"Jacinto acompañó a Don Esteban"
+);
+
+
+}
+
+else{
+
+
+incorrecto(
+"r11",
+"La respuesta era Jacinto"
+);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+// MISIÓN 12
+
+
+function juego12(r){
+
+
+if(r=="a"){
+
+
+correcto(
+"r12",
+"El cerro se cubre de neblina"
+);
+
+
+}
+
+else{
+
+
+incorrecto(
+"r12",
+"Esa era la respuesta correcta"
+);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+// MISIÓN 13
+
+
+function juego13(r){
+
+
+if(r=="a"){
+
+
+correcto(
+"r13",
+"Tomaron las mazorcas"
+);
+
+
+}
+
+else{
+
+
+incorrecto(
+"r13",
+"La respuesta era tomar las mazorcas"
+);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+// MISIÓN 14
+
+
+function juego14(r){
+
+
+if(r=="b"){
+
+
+correcto(
+"r14",
+"La historia no ocurrió en Quito"
+);
+
+
+}
+
+else{
+
+
+incorrecto(
+"r14",
+"La respuesta era incorrecto"
+);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+// MISIÓN 15
+
+
+function juego15(r){
+
+
+if(r=="a"){
+
+
+correcto(
+"r15",
+"Había herramientas antiguas y vasijas"
+);
+
+
+}
+
+else{
+
+
+incorrecto(
+"r15",
+"Esa no era la respuesta"
+);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+// MISIÓN 16
+
+
+function juego16(){
+
+
+let respuesta =
+document.getElementById("respuesta16").value.toLowerCase();
+
+
+
+if(respuesta.includes("oro")){
+
+
+correcto(
+"r16",
+"Era el oro de las mazorcas"
+);
+
+
+}
+
+else{
+
+
+incorrecto(
+"r16",
+"La respuesta era oro"
+);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+// MISIÓN 17
+
+
+function juego17(r){
+
+
+if(r=="a"){
+
+
+correcto(
+"r17",
+"Es verdadero según la leyenda"
+);
+
+
+}
+
+else{
+
+
+incorrecto(
+"r17",
+"Era verdadero"
+);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+// MISIÓN 18
+
+
+function juego18(){
+
+
+let respuesta =
+document.getElementById("respuesta18").value.toLowerCase();
+
+
+
+if(respuesta.includes("esteban")){
+
+
+correcto(
+"r18",
+"Don Esteban era el hacendado"
+);
+
+
+}
+
+else{
+
+
+incorrecto(
+"r18",
+"La respuesta era Esteban"
+);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+// MISIÓN 19
+
+
+function juego19(r){
+
+
+if(r=="a"){
+
+
+correcto(
+"r19",
+"La humildad permitía regresar"
+);
+
+
+}
+
+else{
+
+
+incorrecto(
+"r19",
+"La respuesta era humildad"
+);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+// MISIÓN 20
+
+
+function juego20(){
+
+
+let respuesta =
+document.getElementById("respuesta20").value.toLowerCase();
+
+
+
+if(respuesta.includes("cerro")){
+
+
+correcto(
+"r20",
+"¡Felicidades! Terminaste la aventura"
+);
+
+
+}
+
+else{
+
+
+incorrecto(
+"r20",
+"La respuesta era El Cerro de las Minas"
+);
+
+
+}
+
+
+}
+
+
+
+</script>
+<!-- ================= FOOTER ================= -->
+
+
+<footer style="background-color:#16411c; color:white; padding:30px 20px; font-family:Arial, sans-serif;">
+
+<div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center;">
+
+
+<!-- Imagen institucional -->
+
+<div style="flex:1 1 300px; text-align:center; margin-bottom:20px;">
+
+<img src="img/Imagen1 UNL.png"
+alt="Universidad Nacional de Loja"
+style="max-width:250px; height:auto;">
+
+</div>
+
+
+
+
+<!-- Información -->
+
+<div style="flex:1 1 300px; font-size:14px; line-height:1.8;">
+
+
+<strong>
+Ciudad Universitaria Guillermo Falconí
+</strong>
+
+<br>
+
+Loja - Ecuador
+
+<br>
+
+☎️ <strong>
+07 2593550
+</strong>
+(Opción 1 - Presencial)
+
+<br>
+
+☎️ <strong>
+07 2593550
+</strong>
+(Opción 2 - Distancia)
+
+<br>
+
+📧 <strong>
+comunicacion@unl.edu.ec
+</strong>
+
+<br>
+
+📍
+
+<a href="https://www.openstreetmap.org/?mlat=-4.03364&amp;mlon=-79.20311#map=17/-4.03364/-79.20311"
+
+target="_blank"
+
+style="color:#aad2ff; text-decoration:underline;">
+
+<strong>
+Ver ubicación en el mapa
+</strong>
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div style="text-align:center; font-size:12px; margin-top:25px; color:#aaa;">
+
+© 2025 Universidad Nacional de Loja. Todos los derechos reservados.
+
+</div>
+
+
+</footer>
+
+</html>
